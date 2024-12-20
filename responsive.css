@@ -1,0 +1,291 @@
+@media (max-width: 768px) {
+    .main {
+        width: 76.8rem;
+        height: 145rem;
+        padding: 4rem;
+        display: block;
+    }
+
+    .main .menu .title-product-list {
+        font-size: 3.3rem;
+    }
+
+    .main .menu .box-product-list .product-list {
+        width: 21.3rem;
+        height: auto;
+    }
+
+    .main .menu .box-product-list .product-list .waffles-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-waffle-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .creme-b-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-creme-brulee-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .macaron-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-macaron-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .tiramisu-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-tiramisu-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .baklava-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-baklava-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .pie-m-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-meringue-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .cake-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-cake-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .brownie-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-brownie-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .panna-c-img-product {
+        width: 21.3rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-panna-cotta-tablet.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .inc-dec-box {
+        left: 12.5%;
+    }
+
+    .main .menu .box-product-list .product-list .btn-add-cart {
+        left: 12.5%;
+    }
+
+    .main .cart {
+        margin-top: 3.2rem;
+    }
+
+    .main .cart .box-cart {
+        width: 68.8rem;
+    }
+
+    .main .cart .box-cart .box-empty-cake {
+        width: 68.8rem;
+    }
+
+    .main .cart .box-cart .box-cart-order {
+        width: 64rem;
+    }
+    .main .cart .box-cart .box-order-total {
+        width: 64rem;
+    }
+    .main .cart .box-cart .box-carbon-neutral {
+        width: 64rem;
+    }
+    .main .cart .box-cart .box-btn-confirm {
+        width: 64rem;
+        display: flex;
+        justify-content: center;
+    }
+    .main .box-order-confirmed-opacity-absolute .box-order-confirmed-opacity {
+        width: 76.8rem;
+    }
+
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed {
+        width: 68.8rem;
+    }
+
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed
+        .box-demanded-background {
+        width: 60.8rem;
+    }
+
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed
+        .btn-starter-new-order {
+        width: 60.8rem;
+    }
+}
+@media (max-width: 375px) {
+    .main {
+        width: 37.5rem;
+        height: 351rem;
+        padding: 2.4rem;
+    }
+
+    .main .menu .box-product-list {
+        margin-top: 3.6rem;
+        grid-template: repeat(9, auto) / repeat(1, auto);
+    }
+
+    .main .menu .box-product-list .product-list {
+        width: 31.9rem;
+    }
+
+    .main .menu .box-product-list .product-list .waffles-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-waffle-mobile.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .creme-b-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-creme-brulee-mobile.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .macaron-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-macaron-mobile.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .tiramisu-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-tiramisu-mobile.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .baklava-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-baklava-mobile.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .pie-m-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-meringue-mobile.jpg);
+    }
+    .main .menu .box-product-list .product-list .cake-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-cake-mobile.jpg);
+    }
+    .main .menu .box-product-list .product-list .brownie-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-brownie-mobile.jpg);
+    }
+    .main .menu .box-product-list .product-list .panna-c-img-product {
+        width: 32.7rem;
+        height: 21.2rem;
+        background-image: url(./assets/images/image-panna-cotta-mobile.jpg);
+    }
+
+    .main .menu .box-product-list .product-list .btn-add-cart {
+        left: 26%;
+    }
+    .main .menu .box-product-list .product-list .inc-dec-box {
+        left: 26%;
+    }
+
+    .main .cart .box-cart {
+        width: 32.7rem;
+        padding: 2.4rem;
+    }
+
+    .main .cart .box-cart .title-cart {
+        font-size: 2.5rem;
+    }
+    .main .cart .box-cart .box-empty-cake {
+        width: 27.9rem;
+    }
+
+    .main .cart .box-cart .box-empty-cake .empty-cake-img {
+        margin-top: 4rem;
+    }
+
+    .main .cart .box-cart .box-cart-order {
+        width: 27.9rem;
+    }
+    .main .cart .box-cart .box-order-total {
+        width: 27.9rem;
+    }
+    .main .cart .box-cart .box-carbon-neutral {
+        width: 27.9rem;
+    }
+    .main .cart .box-cart .box-btn-confirm {
+        width: 27.9rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main .box-order-confirmed-opacity-absolute .box-order-confirmed-opacity {
+        position: relative;
+        width: 37.5rem;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.35);
+    }
+
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed {
+        position: absolute;
+        top: 9rem;
+        width: 37.5rem;
+        height: auto;
+        padding: 4rem 2.4rem 2.4rem 2.4rem;
+        border-radius: none;
+        border-top-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        background-color: #ffffff;
+    }
+
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed
+        .box-order-confirmed-title {
+        width: 20rem;
+        font-size: 3.4rem;
+    }
+
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed
+        .box-order-confirmed-text {
+        font-size: 1.4rem;
+    }
+
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed
+        .box-demanded-background {
+        width: 32.7rem;
+    }
+    .main
+        .box-order-confirmed-opacity-absolute
+        .box-order-confirmed-opacity
+        .box-order-confirmed
+        .btn-starter-new-order {
+        width: 32.7rem;
+    }
+}

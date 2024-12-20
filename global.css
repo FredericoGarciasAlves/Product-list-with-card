@@ -1,0 +1,18 @@
+html {
+    font-size: 10px;
+}
+
+@font-face {
+    font-family: "Red hat text bold";
+    src: url("./assets/fonts/RedHatText-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Red hat text semibold";
+    src: url("./assets/fonts/RedHatText-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Red hat text regular";
+    src: url("./assets/fonts/RedHatText-Regular.ttf") format("truetype");
+}
