@@ -37,14 +37,14 @@ Os usuários devem ser capazes de:
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+-   Solution URL: [gitHub](https://github.com/FredericoGarciasAlves/Product-list-with-card)
+-   Live Site URL: [Site hospedado no git hub](https://fredericogarciasalves.github.io/Product-list-with-card/)
 
-## My process
+## Meu processo
 
 Esse mini projeto, é de dificuldade junior (dificuldade que esta no Frontend Mentor), eu fiz apartir do que estava no figma, primeiramente comecei a analizar o projeto e o que eu iria fazer, analizei e percebi que nesse projeto não trocava de posição a hierarquia de cima para baixo o layout, a não ser a seção de escolha de produtos e o carrinho que no desktop fica um do lado do outro e no mobile / tablet fica em baixo, observei que faria com display flex esse layout, observei que as imagens trocavam de tamanho e verifiquei nos arquivos que tinha uma pra cada tamanho de tela, já entendi que teria que fazer com background-img, assim que montei o HTML e o CSS parti como eu faria as animações, essa parte foi a mais complexa para mim pois é o primeiro projeto então essas teorias e conceitos de funcionalidades de como fazer o programa funcionar nesse caso entender que clicar em um botão e adicionar ao carrrinho, multiplicar o numero de vezes clicado pelo valor e mostra um resultado e os resultados pegar todos os resultados totais e colocar em um valor total foi dificil por que no meio de tudo isso minha cabeça tambem processou como fazer o mais otimizado possivel, as estilização e como iria montar a hierarquias, a primeiro momento tive confusão para consolidar a ideia de funcionamento do projeto, mas usei as ferramentas, peguei um tablet e tirei uma foto e organizei todo o conteudo, apartir disso comecei a desenvolver melhor o projeto, tive dificuldade de como fazer os calculos, lembro que perdi uma tarde inteira resolvendo de como clicar no botão - iria diminuir e no + como aumentar sem que os demais aumentasem ou desse interferencia num calculo a outro o restante do projeto foi facil de fazer na parte do JS e no CSS foi bastante digitação creio que mais a frente precisarei aprender taiwildcss
 
-### Built with
+### Construido com
 
 -   Semantic HTML5 markup
 -   CSS custom properties
