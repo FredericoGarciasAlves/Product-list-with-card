@@ -1,0 +1,21 @@
+{
+  "name": "product-list-with-card",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Está é uma solução do [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges ajudá-lo a melhorar suas habilidades de codificação criando projetos realistas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FredericoGarciasAlves/Product-list-with-card.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FredericoGarciasAlves/Product-list-with-card/issues"
+  },
+  "homepage": "https://github.com/FredericoGarciasAlves/Product-list-with-card#readme"
+}

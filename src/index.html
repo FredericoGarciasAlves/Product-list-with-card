@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product list with card</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <main class="main">
+      <section class="menu">
+        <h1 class="title-product-list">Desserts</h1>
+        <div class="box-product-list">
+          <div class="product-list">
+            <div class="waffles-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Waffle</span>
+            <h3 class="name-product">Waffle with Berries</h3>
+            <span class="price-product">$6.50</span>
+          </div>
+          <div class="product-list">
+            <div class="creme-b-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Crème Brûlée</span>
+            <h3 class="name-product">Vanilla Bean Crème Brûlée</h3>
+            <span class="price-product">$7.00</span>
+          </div>
+          <div class="product-list">
+            <div class="macaron-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Macaron</span>
+            <h3 class="name-product">Macaron Mix of Five</h3>
+            <span class="price-product">$8.00</span>
+          </div>
+          <div class="product-list">
+            <div class="tiramisu-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Tiramisu</span>
+            <h3 class="name-product">Classic Tiramisu</h3>
+            <span class="price-product">$5.50</span>
+          </div>
+          <div class="product-list">
+            <div class="baklava-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Baklava</span>
+            <h3 class="name-product">Pistachio Baklava</h3>
+            <span class="price-product">$4.00</span>
+          </div>
+          <div class="product-list">
+            <div class="pie-m-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Pie</span>
+            <h3 class="name-product">Lemon Meringue Pie</h3>
+            <span class="price-product">$5.00</span>
+          </div>
+          <div class="product-list">
+            <div class="cake-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Cake</span>
+            <h3 class="name-product">Red velvet Cake</h3>
+            <span class="price-product">$4.50</span>
+          </div>
+          <div class="product-list">
+            <div class="brownie-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Brownie</span>
+            <h3 class="name-product">Salted Caramel Brownie</h3>
+            <span class="price-product">$5.50</span>
+          </div>
+          <div class="product-list">
+            <div class="panna-c-img-product after-div"></div>
+            <button type="button" class="btn-add-cart">
+              <img
+                src="../assets/icons/icon-add-to-cart.svg"
+                alt="shopping cart icon"
+              />
+              <p class="text-add-cart">Add to Cart</p>
+            </button>
+            <span class="type-product">Panna Cotta</span>
+            <h3 class="name-product">Vanilla Panna Cotta</h3>
+            <span class="price-product">$6.50</span>
+          </div>
+        </div>
+      </section>
+      <section class="cart" id="cart">
+        <div class="box-cart" id="box-cart">
+          <h2 class="title-cart">Your Cart(0)</h2>
+          <div class="box-empty-cake">
+            <img
+              src="../assets/icons/illustration-empty-cart.svg"
+              alt=""
+              class="empty-cake-img"
+              id="empty-cake-img"
+            />
+            <p class="empty-text-cart" id="empty-text-cart">
+              Your add items will appear here
+            </p>
+          </div>
+          <div id="container-order"></div>
+        </div>
+      </section>
+    </main>
+    <script src=""></script>
+    <script type="module" src="scripts/dataFood.js"></script>
+    <script type="module" src="scripts/events.js"></script>
+    <script type="module" src="scripts/functions.js"></script>
+  </body>
+</html>
