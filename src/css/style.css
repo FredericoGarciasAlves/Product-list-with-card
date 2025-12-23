@@ -1,5 +1,6 @@
 body {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,12 +8,13 @@ body {
 
 .main {
   background-color: #fcf8f6;
-  width: 1440px;
-  height: 136.1rem;
+  width: 100%;
+  height: 100%;
   padding: 9rem 11.2rem;
   display: flex;
   column-gap: 3.2rem;
   position: relative;
+  justify-content: center;
 }
 
 .main .menu .title-product-list {
@@ -182,8 +184,8 @@ body {
   font-size: 3rem;
   width: 22.4rem;
   text-align: left;
-  color: #ad8a85;
-  font-family: "Red hat text semibold";
+  color: #c73b0f;
+  font-family: "Red hat text bold";
 }
 
 .main .cart .box-cart .box-empty-cake {
@@ -373,21 +375,22 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 136.1rem;
+  height: 100vh;
+  width: 100%;
 }
 
-.main .box-order-confirmed-opacity-absolute .box-order-confirmed-opacity {
+.main .box-order-confirmed-opacity-absolute .box-order-confirmed-display-flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 144rem;
-  height: 136.1rem;
+  width: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.35);
 }
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed {
   width: 59.2rem;
   height: auto;
@@ -398,28 +401,29 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-order-confirmed-title {
   margin-top: 2.4rem;
   font-family: "Red hat text bold", sans-serif;
-  font-size: 3.2rem;
+  font-size: 3.7rem;
   font-weight: 900;
 }
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-order-confirmed-text {
   margin-top: 1rem;
   font-family: "Red hat text regular", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  color: #87635a;
 }
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background {
   width: 51.2rem;
@@ -432,7 +436,7 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
   .box {
@@ -446,20 +450,31 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
+  .box-order-confirmed
+  .box-demanded-background
+  .product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 
+.main
+  .box-order-confirmed-opacity-absolute
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
   .box:last-child {
   padding-bottom: 2.4rem;
-}
+} */
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
-  .box
-  .box-demanded {
+  .product-container
+  .product-box {
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
@@ -468,12 +483,12 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
-  .box
-  .box-demanded
-  .box-demanded-img {
+  .product-container
+  .product-box
+  .img-product-box {
   border-radius: 1rem;
   width: 4.8rem;
   height: 4.8rem;
@@ -482,24 +497,25 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
-  .box
-  .box-demanded
-  .box-demanded-name-product {
+  .product-container
+  .product-box
+  .title-food {
   font-family: "Red hat text regular", sans-serif;
   font-size: 1.3rem;
+  grid-area: 1 / 2 / 2 / 3;
 }
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
-  .box
-  .box-demanded
-  .box-demanded-qua-price {
+  .product-container
+  .product-box
+  .amount-box {
   display: flex;
   align-items: center;
   column-gap: 1.4rem;
@@ -508,13 +524,12 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
-  .box
-  .box-demanded
-  .box-demanded-qua-price
-  .box-demanded-quantity {
+  .product-container
+  .product-box
+  .quantity {
   color: #c73b0f;
   font-size: 1.3rem;
   font-weight: 700;
@@ -522,30 +537,53 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
-  .box
-  .box-demanded
-  .box-demanded-qua-price
-  .box-demanded-price {
+  .product-container
+  .product-box
+  .price-food {
   font-size: 1.3rem;
+  color: #87635a;
 }
-
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-background
-  .box
-  .box-demanded-price-total {
-  font-size: 1.7rem;
+  .product-container
+  .product-box
+  .price-food
+  .dollar-sign {
   font-weight: 500;
 }
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
+  .box-order-confirmed
+  .box-demanded-background
+  .product-container
+  .unit-price {
+  font-size: 1.7rem;
+  font-family: "Red hat text semibold", sans-serif;
+  font-weight: 800;
+}
+
+.main
+  .box-order-confirmed-opacity-absolute
+  .box-order-confirmed-display-flex
+  .box-order-confirmed
+  .box-demanded-background
+  .hr-product {
+  background-color: #f5eeec;
+  border: 1px solid #f5eeec;
+  margin-bottom: 1.6rem;
+  margin-top: 1.6rem;
+}
+.main
+  .box-order-confirmed-opacity-absolute
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-order-total {
   font-family: "Red hat text regular", sans-serif;
@@ -557,16 +595,17 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
+  .box-demanded-background
   .box-demanded-order-total
   .box-demanded-order-total-text {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .box-demanded-order-total
   .box-demanded-order-total-price-total {
@@ -577,7 +616,7 @@ body {
 
 .main
   .box-order-confirmed-opacity-absolute
-  .box-order-confirmed-opacity
+  .box-order-confirmed-display-flex
   .box-order-confirmed
   .btn-starter-new-order {
   width: 51.2rem;

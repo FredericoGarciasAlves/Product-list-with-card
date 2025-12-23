@@ -1,70 +1,115 @@
 # Frontend Mentor - Product list with cart solution
 
-Está é uma solução do [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges ajudá-lo a melhorar suas habilidades de codificação criando projetos realistas.
+This is a solution to the [Product list with cart challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/product-list-with-cart-5MmqLVAp_d). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-## Indíce
+## Table of contents
 
--   [Visão geral](#visao-geral)
-    -   [O desafio](#O-desafio)
-    -   [Screenshot](#screenshot)
-    -   [Links](#links)
--   [Meu progresso](#meu-progresso)
-    -   [construido com](#Construido-com)
-    -   [O que eu aprendi](#O-que-eu-aprendi)
-    -   [Continuar desenvolvendo](#Continuar-desenvolvendo)
--   [Autor](#Autor)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Visão-geral
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-Esse é um projeto de um cardápio aonde podemos adicionar itens no carrinho e confirmar o pedido
+## Overview
 
-### O desafio
+### The challenge
 
-Os usuários devem ser capazes de:
+Users should be able to:
 
--   Adicione itens ao carrinho e remova-os
--   Aumentar/diminuir o número de itens no carrinho
--   Veja um modal de confirmação de pedido quando clicar em "Confirmer Order"
--   Redefina suas seleções quando clicarem em "Start New Order"
--   Veja o layout ideal para a interface dependendo do tamanho da tela do dispositivo
--   Veja os estados de foco e foco de todos os elementos interativos na página
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
-![](./assets/images/picture-product-list-with-card.png)
-![](./assets/images/picture-product-list-with-card-cart-order-js.png)
-![](./assets/images/picture-product-list-with-card-order-confirmed-js.png)
+![](./screenshot.jpg)
+
+Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+
+Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+
+Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+
+**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
--   Solution URL: [gitHub](https://github.com/FredericoGarciasAlves/Product-list-with-card)
--   Live Site URL: [Site hospedado no git hub](https://fredericogarciasalves.github.io/Product-list-with-card/)
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## Meu processo
+## My process
 
-Esse mini projeto, é de dificuldade junior (dificuldade que esta no Frontend Mentor), eu fiz apartir do que estava no figma, primeiramente comecei a analizar o projeto e o que eu iria fazer, analizei e percebi que nesse projeto não trocava de posição a hierarquia de cima para baixo o layout, a não ser a seção de escolha de produtos e o carrinho que no desktop fica um do lado do outro e no mobile / tablet fica em baixo, observei que faria com display flex esse layout, observei que as imagens trocavam de tamanho e verifiquei nos arquivos que tinha uma pra cada tamanho de tela, já entendi que teria que fazer com background-img, assim que montei o HTML e o CSS parti como eu faria as animações, essa parte foi a mais complexa para mim pois é o primeiro projeto então essas teorias e conceitos de funcionalidades de como fazer o programa funcionar nesse caso entender que clicar em um botão e adicionar ao carrrinho, multiplicar o numero de vezes clicado pelo valor e mostra um resultado e os resultados pegar todos os resultados totais e colocar em um valor total foi dificil por que no meio de tudo isso minha cabeça tambem processou como fazer o mais otimizado possivel, as estilização e como iria montar a hierarquias, a primeiro momento tive confusão para consolidar a ideia de funcionamento do projeto, mas usei as ferramentas, peguei um tablet e tirei uma foto e organizei todo o conteudo, apartir disso comecei a desenvolver melhor o projeto, tive dificuldade de como fazer os calculos, lembro que perdi uma tarde inteira resolvendo de como clicar no botão - iria diminuir e no + como aumentar sem que os demais aumentasem ou desse interferencia num calculo a outro o restante do projeto foi facil de fazer na parte do JS e no CSS foi bastante digitação creio que mais a frente precisarei aprender taiwildcss
+### Built with
 
-### Construido com
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [React](https://reactjs.org/) - JS library
+- [Next.js](https://nextjs.org/) - React framework
+- [Styled Components](https://styled-components.com/) - For styles
 
--   Semantic HTML5 markup
--   CSS custom properties
--   Flexbox
--   CSS Grid
--   JS
+**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-### O que eu aprendi
+### What I learned
 
-Aprendi mais sobre como fazer códigos no JS
-Estilização dinamica pelo JS
-Otimização de carremento de página web
+Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-### Continuar desenvolvendo
+To see how you can add code snippets, see below:
 
-TaiwildCSS APIs do js e backend
+```html
+<h1>Some HTML code I'm proud of</h1>
+```
+```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+```
+```js
+const proudOfThisFunc = () => {
+  console.log('🎉')
+}
+```
 
-## Autor
+If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
--   Frontend Mentor - [@FredericoGarciasAlves](https://www.frontendmentor.io/profile/yourusername)
--   Twitter - [@FredericoGA70](https://x.com/FredericoGA70)
--   Instagram - [@fred_alves23](https://www.instagram.com/fred_alves23/)
--   Trheads - [@fred_alves23](https://www.threads.net/@fred_alves23)
+**Note: Delete this note and the content within this section and replace with your own learnings.**
+
+### Continued development
+
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+
+### Useful resources
+
+- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+
+**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+
+## Author
+
+- Website - [Add your name here](https://www.your-site.com)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+
+**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+
+## Acknowledgments
+
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

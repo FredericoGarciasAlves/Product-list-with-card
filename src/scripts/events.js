@@ -1,3 +1,5 @@
+// 1. Adicionar a quantidade de produtos selecionado no menu no carrinho
+
 import { dataFood } from "./dataFood.js";
 import { numberIncDec, priceProducMult } from "./functions.js";
 
@@ -27,6 +29,8 @@ arrayProductList.forEach((element, index) => {
     }
   });
 });
+
+// adicionando a caixa de incremento e decremento e a borda
 arrayBtnAddCart.forEach((btn, index) => {
   btn.addEventListener("click", () => {
     arrayAfterDiv[index].innerHTML = `
@@ -38,29 +42,58 @@ arrayBtnAddCart.forEach((btn, index) => {
         </button> 
     </div> 
 `;
-
+    afterDiv[index].style.border = "3px solid #c73b0f";
+    // removendo o botão de adicionar item no carrinho
     arrayBtnAddCart[index].remove();
 
     emptyCakeImg.style.display = "none";
     emptyTextcart.style.display = "none";
+  });
+});
 
+// Adicionando o produto no carrinho com um objeto
+
+let myCartShopping = [{}, {}, {}, {}, {}, {}, {}, {}, {}];
+arrayBtnAddCart.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
     containerOrder.innerHTML += `
     <div class="box-cart-order">
         <div class="box-order">
             <div class="box-order-info">
-                <h3 class="title-order">${arrayNameProduct[index].textContent}</h3>
+                <h3 class="title-order">${dataFood[index].name}</h3>
                 <div class="box-price-order">
                     <div class="number-order">1x</div>
-                    <div class="price-order">@ ${arrayPriceProduct[index].textContent}</div>
-                    <div class="calculation-order" id="${index}">${arrayPriceProduct[index].textContent}</div>
+                    <div class="price-order">@ $${dataFood[index].price.toFixed(
+                      2
+                    )}</div>
+                    <div class="calculation-order" id="${index}">$${dataFood[
+      index
+    ].price.toFixed(2)}</div>
                 </div>
             </div>
             <img class="icon-box-order" src="../assets/icons/icon-remove-item.svg" alt="Icon to remove order from cart"/> 
         </div>
     </div>
-`;
+    `;
+    let food = {
+      name: dataFood[index].name,
+      price: dataFood[index].price,
+      quantity: dataFood[index].quantity,
+      priceTotal: dataFood[index].price,
+      url: dataFood[index].url,
+      description: dataFood[index].description,
+      active: true,
+    };
+    myCartShopping[index] = food;
+    console.log(myCartShopping);
+  });
+});
 
-    const containerfixedCart = `
+// Adionando os elementos fixos no carrinho, como o texto carbon neutral info
+
+arrayBtnAddCart.forEach((btn, index) => {
+  btn.addEventListener("click", () => {
+    const containerFixedCart = `
     <div class="box-order-total">
         <span class="text-order-total">Order total</span>
         <span class="total-box-order-total"></span>
@@ -76,7 +109,7 @@ arrayBtnAddCart.forEach((btn, index) => {
 
     const boxOrderTotal = document.querySelector(".box-order-total");
     if (!boxOrderTotal) {
-      containerOrder.insertAdjacentHTML("afterend", containerfixedCart);
+      containerOrder.insertAdjacentHTML("afterend", containerFixedCart);
     }
   });
 });
@@ -84,6 +117,8 @@ arrayBtnAddCart.forEach((btn, index) => {
 // Ao clicar no botão de + ou - aumenta ou diminui o número no menu e calcular o preço com base na quantidade de itens adicionados no carrinho
 
 let quantityNumberMany = 1;
+let arrayQuantityNumberMany = [1, 1, 1, 1, 1, 1, 1, 1, 1];
+let arrayQuantityNumberManyCart = [];
 
 arrayProductList.forEach((elementProductList, index) => {
   elementProductList.addEventListener("click", (e) => {
@@ -92,60 +127,122 @@ arrayProductList.forEach((elementProductList, index) => {
     const productNumberMany = elementProductList.querySelector(".number");
     const calculationOrder = document.getElementById(`${index}`);
     const orderTotal = document.querySelector(".total-box-order-total");
+    const boxIncDec = document.getElementsByClassName(`inc-dec-box`);
 
     orderTotal.textContent = `$${priceOrderTotal.toFixed(2)}`;
     if (iconIncrement) {
-      quantityNumberMany = productNumberMany.textContent;
+      quantityNumberMany = arrayQuantityNumberMany[index];
       quantityNumberMany++;
+      arrayQuantityNumberMany.splice(index, 1, quantityNumberMany);
       numberIncDec(elementProductList, quantityNumberMany);
+      // Clico no botão de increment adicionar o numero de produtos dentro de number order
+      const arrayBoxIncDec = Array.from(boxIncDec);
+
+      arrayBoxIncDec.forEach((element, indexBoxIncDec) => {});
+
       const calcMult = priceProducMult(quantityNumberMany, index, dataFood);
-
       calculationOrder.textContent = `$${calcMult.toFixed(2)}`;
-
       priceOrderTotal = priceOrderTotal + dataFood[index].price;
       orderTotal.textContent = `$${priceOrderTotal.toFixed(2)}`;
-      console.log(priceOrderTotal);
+      myCartShopping[index].quantity = quantityNumberMany;
+      myCartShopping[index].priceTotal = calcMult.toFixed(2);
+      console.log(index);
+      const titleOrder = document.querySelectorAll(".title-order");
+      const arrayTitleOrder = Array.from(titleOrder);
+      arrayTitleOrder.forEach((element, i) => {
+        if (element.textContent === myCartShopping[index].name) {
+          const numberOrder = document.querySelectorAll(".number-order");
+          numberOrder[i].textContent = `${quantityNumberMany}x`;
+        }
+      });
+      console.log(myCartShopping);
     }
     if (iconDecrement) {
-      quantityNumberMany = productNumberMany.textContent;
-      if (quantityNumberMany !== "1") {
+      if (arrayQuantityNumberMany[index] !== 1) {
+        quantityNumberMany = arrayQuantityNumberMany[index];
         quantityNumberMany--;
+        arrayQuantityNumberMany.splice(index, 1, quantityNumberMany);
         numberIncDec(elementProductList, quantityNumberMany);
+
         const calcMult = priceProducMult(quantityNumberMany, index, dataFood);
-
         calculationOrder.textContent = `$${calcMult.toFixed(2)}`;
-
         priceOrderTotal -= dataFood[index].price;
         orderTotal.textContent = `$${priceOrderTotal.toFixed(2)}`;
-        console.log(priceOrderTotal);
+        const titleOrder = document.querySelectorAll(".title-order");
+        const arrayTitleOrder = Array.from(titleOrder);
+        arrayTitleOrder.forEach((element, i) => {
+          if (element.textContent === myCartShopping[index].name) {
+            const numberOrder = document.querySelectorAll(".number-order");
+            numberOrder[i].textContent = `${quantityNumberMany}x`;
+          }
+        });
       }
     }
   });
 });
 
-// let arrayCartItensIndex = [];
+arrayAfterDiv.forEach((btn, index) => {
+  btn.addEventListener("click", (e) => {});
+});
 
-// arrayProductList.forEach((elementProduct, elementIndex) => {
-//   elementProduct.addEventListener("click", (e) => {
-//     const arrayContains = arrayCartItensIndex.filter((number) => {
-//       return number === elementIndex;
-//     });
+// adicionando a box Confirmed Order
 
-//     if (arrayContains.length === 0) {
-//       arrayCartItensIndex.push(elementIndex);
-//     }
-//   });
-// });
-const boxCart = document.getElementById("box-cart");
+const boxCart = document.querySelector(".box-cart");
+
 boxCart.addEventListener("click", (e) => {
-  const btnConfirm = e.target.closest(".btn-confirm");
+  const btnConfirmOrder = e.target.matches(".btn-confirm");
+  if (btnConfirmOrder) {
+    const arrayFiltered = myCartShopping.filter((element) => {
+      return element.active === true;
+    });
 
-  if (btnConfirm) {
+    let arrayProduct = undefined;
+    arrayFiltered.reverse().forEach((element, index) => {
+      if (arrayProduct === undefined) {
+        arrayProduct = ` 
+    <div class="product-container">
+      <div class="product-box">
+        <img src="${element.url}" alt="${
+          element.description
+        }" class="img-product-box">
+        <h6 class="title-food">${element.name}</h6>
+        <div class="amount-box">
+          <span class="quantity">${element.quantity}x</span>
+          <span class="price-food">@ <span class="dollar-sign">$</span>${Number(
+            element.priceTotal
+          ).toFixed(2)}</span>
+        </div>
+      </div>
+      <span class="unit-price">$${Number(element.price).toFixed(2)}</span>
+    </div>
+    <hr class="hr-product"/>
+    `;
+      } else {
+        arrayProduct += ` 
+    <div class="product-container">
+      <div class="product-box">
+        <img src="${element.url}" alt="${
+          element.description
+        }" class="img-product-box">
+        <h6 class="title-food">${element.name}</h6>
+        <div class="amount-box">
+          <span class="quantity">${element.quantity}x</span>
+          <span class="price-food">@ <span class="dollar-sign">$</span>${Number(
+            element.priceTotal
+          ).toFixed(2)}</span>
+        </div>
+      </div>
+      <span class="unit-price">$${Number(element.price).toFixed(2)}</span>
+    </div>
+    <hr class="hr-product"/>
+    `;
+      }
+    });
     const boxOrderConfirmed = `
     <div class="box-order-confirmed-opacity-absolute">
-      <div class="box-order-confirmed-opacity">
+      <div class="box-order-confirmed-display-flex">
         <div class="box-order-confirmed">
-          <img src="../../assets/icons/icon-order-confirmed.svg" class="box-order-confirmed-icon" />
+          <img src="../../assets/icons/icon-order-confirmed.svg" alt="Icone de confirmação" class="box-order-confirmed-icon" />
           <h2 class="box-order-confirmed-title">
             Order Confirmed
           </h2>
@@ -153,17 +250,26 @@ boxCart.addEventListener("click", (e) => {
             We hope you enjoy your food!
           </P>
           <div class="box-demanded-background">
+            ${arrayProduct}
             <div class="box-demanded-order-total">
               <p class="box-demanded-order-total-text">
                 Order Total
               </p>
-              <span class="box-demanded-order-total-price-total">
+              <span class="box-demanded-order-total-price-total">${Number(
+                priceOrderTotal
+              ).toFixed(2)}
               </span> 
             </div>
           </div> 
+          <button type="button" class="btn-starter-new-order">
+            Starter New Order
+          </button>
         </div>
       </div>
     </div>
     `;
+
+    const main = document.querySelector(".main");
+    main.innerHTML += boxOrderConfirmed;
   }
 });
